@@ -1,0 +1,45 @@
+import tkinter as tk
+from tkinter import *
+from PIL import ImageTk,Image
+##================Main Window=============================##
+root=tk.Tk()
+root.title("Forecasting Power Consumption")
+root.geometry("2000x1000")
+img = ImageTk.PhotoImage(Image.open("C:\\Users\\ADMIN\\Desktop\\b\\Study\\SEM 5\\R programming\\R project\\3242971.jpg"))
+label = Label(root, image = img)
+label.pack()
+root.configure(background='white')
+##=====================Title=============================##
+#root.wm_attributes('-transparentcolor', '#ab23ff')
+k=tk.Label(root,text="POWER CONSUMPTION ANALYSIS",font=("Comic Sans",30))
+k.place(x=430,y=90)
+##===================Labels===========================##
+u=Label(root,text="Temperature",font=("Comic Sans",20),bg="white")
+u.place(x=500,y=205)
+v=Label(root,text="Humidity",font=("Comic Sans",20),bg="white")
+v.place(x=500,y=265)
+p=Label(root,text="Wind.Speed",font=("Comic Sans",20),bg="white")
+p.place(x=500,y=325)
+q=Label(root,text="GDF",font=("Comic Sans",20),bg="white")
+q.place(x=500,y=385)
+r=Label(root,text="Diffuse.Flows",font=("Comic Sans",20),bg="white")
+r.place(x=500,y=445)
+t=Button(root,text="SEARCH",font=("Comic Sans",19),bg="white",width=25)
+t.place(x=580,y=505)
+u=Label(root,text="PJME_MW",font=("Comic Sans",20),bg="white")
+u.place(x=500,y=580)
+##==================Enteries=======================##
+t1=Entry(root,width=20,font=("Comic Sans",20))
+t1.place(x=720,y=205)
+t2=Entry(root,width=20,font=("Comic Sans",20))
+t2.place(x=720,y=265)
+t3=Entry(root,width=20,font=("Comic Sans",20))
+t3.place(x=720,y=325)
+t4=Entry(root,width=20,font=("Comic Sans",20))
+t4.place(x=720,y=385)
+t5=Entry(root,width=20,font=("Comic Sans",20))
+t5.place(x=720,y=445)
+t6=Entry(root,width=20,font=("Comic Sans",20))
+t6.place(x=720,y=580)
+##===================Calling==================##
+root.mainloop()
